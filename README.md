@@ -13,7 +13,7 @@ A modern, highly responsive web application built to streamline the food browsin
 ## 🚀 Live Demo
 Experience the application live in your browser! 
 
-👉 **[Click here to view the live Foodizo App](https://shepherd-bit.github.io/Foodizo/)**
+👉 **[Click here to view the live Foodizo Web Page](https://shepherd-bit.github.io/Foodizo/)**
 
 *(This project utilizes an automated CI/CD pipeline via GitHub Actions. Any updates pushed to the main branch are instantly compiled and deployed to the live link above!)*
 
