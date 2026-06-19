@@ -61,6 +61,20 @@ const Categories = () => {
 };
 
 const styles = {
+    headerContainer: {
+    textAlign: 'center',
+    marginBottom: '40px',
+  },
+  heading: {
+    fontSize: '32px',
+    fontWeight: '700',
+    color: '#222222',
+    marginBottom: '8px',
+  },
+  subHeading: {
+    fontSize: '16px',
+    color: '#666666',
+  },
   section: {
     width: '100%',
     backgroundColor: '#FFFFFF',
