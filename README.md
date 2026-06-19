@@ -1,16 +1,43 @@
-# React + Vite
+# 🍔 Foodizo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, highly responsive web application built to streamline the food browsing and ordering experience. 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 📱 Project Previews
+![Preview](./public/preview.png)
+![Preview 2](./public/preview-2.png)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Live Demo
+Experience the application live in your browser! 
 
-## Expanding the ESLint configuration
+👉 **[Click here to view the live Foodizo App](https://shepherd-bit.github.io/Foodizo/)**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*(This project utilizes an automated CI/CD pipeline via GitHub Actions. Any updates pushed to the main branch are instantly compiled and deployed to the live link above!)*
+
+---
+
+## ✨ Features
+* **Intuitive UI/UX:** Clean, modern interface designed for effortless navigation.
+* **Component-Driven Architecture:** Built with reusable, modular React components for optimal scalability.
+* **Fully Responsive:** Completely optimized for mobile, tablet, and desktop viewports.
+
+---
+
+## 🛠️ Tech Stack
+* **Frontend Library:** React
+* **Build Tool:** Vite
+* **Styling:** CSS3
+* **Deployment:** GitHub Pages / GitHub Actions
+
+---
+
+## 💻 Local Setup & Installation
+
+If you would like to clone this project and run it locally on your machine, follow these simple steps:
+
+1. **Clone the repository:**
+```bash
+   git clone [https://github.com/shepherd-bit/Foodizo.git](https://github.com/shepherd-bit/Foodizo.git)
