@@ -36,7 +36,7 @@ const styles = {
   heroContainer: {
     width: '100%',
     height: '80vh', // Full screen height
-    backgroundImage: `url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1920&q=80')`, // High-res woman/burger theme image
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1920&q=80')`, // High-res woman/burger theme image
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundAttachment: 'fixed', // This keeps the image non-scrollable/locked
