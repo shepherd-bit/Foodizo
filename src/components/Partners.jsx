@@ -1,24 +1,25 @@
 import React from 'react';
+import { LuCar, LuStore, LuSmartphone } from 'react-icons/lu';
 
 const Partners = () => {
   // Data array to easily populate the three promotional columns
   const promptData = [
-    {
-      icon: '🚗',
-      title: 'Sign Up as a Partner',
-      desc: 'Enjoy competitive earnings, flexible hours, and the freedom to deliver fast food on your own schedule.',
-    },
-    {
-      icon: '🍔',
-      title: 'Become a Retail Partner',
-      desc: 'Grow your business, unlock digital storefront sales, and reach hungry customers right in your neighborhood.',
-    },
-    {
-      icon: '📱',
-      title: 'Maximize convenience with a mobile app',
-      desc: 'Get live order tracking, instant notifications, and personalized meal deals directly on your smartphone.',
-    },
-  ];
+  {
+    icon: <LuCar size={60} color="#E6A100" />, // Changed from 28 to 40
+    title: 'Sign Up as a Partner',
+    desc: 'Enjoy competitive earnings, flexible hours, and the freedom to deliver fast food on your own',
+  },
+  {
+    icon: <LuStore size={60} color="#E6A100" />, // Changed from 28 to 40
+    title: 'Become a Retail Partner',
+    desc: 'Grow your business, unlock digital storefront sales, and reach hungry customers right in your',
+  },
+  {
+    icon: <LuSmartphone size={60} color="#E6A100" />, // Changed from 28 to 40
+    title: 'Maximize convenience with a mobile app',
+    desc: 'Get live order tracking, instant notifications, and personalized meal deals directly on your',
+  },
+];
 
   return (
     <section style={styles.section}>
@@ -45,7 +46,7 @@ const Partners = () => {
 const styles = {
   section: {
     width: '100%',
-    backgroundColor: '#F8F9FA', // Off-white subtle background
+    backgroundColor: '#FFFBEB', // Changed to a premium, faded pastel yellow
     padding: '80px 0',
   },
   container: {

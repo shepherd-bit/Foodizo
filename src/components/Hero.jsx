@@ -100,8 +100,8 @@ const styles = {
     paddingLeft: '15px',
   },
   locationIcon: {
-    fontSize: '18px',
-    marginRight: '10px',
+    fontSize: '28px',
+    marginRight: '8px',
     cursor: 'pointer', // Ready for your location-detection feature later
     color: '#E6A100',  // <-- ADD THIS LINE to apply the deep yellow
   },
