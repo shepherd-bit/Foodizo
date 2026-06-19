@@ -1,0 +1,59 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Design Tokens & CSS Variables */
+:root {
+  --primary-gold: #FFC000;       /* Your signature Gold-Yellow theme color */
+  --primary-gold-hover: #E6AC00; /* Darker gold for button hover states */
+  --dark-charcoal: #222222;      /* Off-black for crisp, readable text */
+  --light-gray: #F8F9FA;         /* For clean section backgrounds */
+  --border-color: #E9ECEF;       /* Soft borders for containers */
+  --white: #FFFFFF;
+  --max-width: 1200px;           /* Standard content alignment width */
+  --font-main: 'Poppins', sans-serif;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--dark-charcoal);
+  background-color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Global Button & Link Utilities */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-main);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Utility Layout Classes to use later */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
