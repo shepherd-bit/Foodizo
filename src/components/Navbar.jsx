@@ -58,7 +58,7 @@ const styles = {
   },
   signInBtn: {
     backgroundColor: 'transparent',
-    color: '#FFC000',
+    color: '#E6A100', // 1. Changed to a deeper amber-gold
     fontSize: '15px',
     fontWeight: '500',
     padding: '10px 20px',
@@ -66,13 +66,13 @@ const styles = {
     // Hover effects are managed globally or via dynamic pseudo-classes later
   },
   signUpBtn: {
-    backgroundColor: '#FFC000',
+    backgroundColor: '#E6A100', // 2. Changed to a deeper amber-gold
     color: '#FFFFFF',
     fontSize: '15px',
     fontWeight: '500',
     padding: '10px 24px',
     borderRadius: '25px',
-    boxShadow: '0 4px 6px rgba(255, 192, 0, 0.2)',
+    boxShadow: '0 4px 6px rgba(230, 161, 0, 0.2)', // 3. Updated shadow to match the new shade
   },
 };
 
