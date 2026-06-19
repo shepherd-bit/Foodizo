@@ -1,59 +1,54 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Categories = () => {
-  // Array of your 7 requested food categories
+  // 5. Image placeholders added to your 7 requested food categories
   const categoriesList = [
-    { name: 'Burgers & Sandwiches', icon: '🍔' },
-    { name: 'Chicken & Seafood', icon: '🍗' },
-    { name: 'Pizza & Italian', icon: '🍕' },
-    { name: 'Mexican-Style Fast Food', icon: '🌮' },
-    { name: 'Breakfast', icon: '🥞' },
-    { name: 'Sides & Snacks', icon: '🍟' },
-    { name: 'Desserts & Drinks', icon: '🥤' }
+    { name: 'Burgers & Sandwiches', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=500&q=80' },
+    { name: 'Chicken & Seafood', img: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=500&q=80' },
+    { name: 'Pizza & Italian', img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=500&q=80' },
+    { name: 'Mexican-Style Fast Food', img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=500&q=80' },
+    { name: 'Breakfast', img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=500&q=80' },
+    { name: 'Sides & Snacks', img: 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=500&q=80' },
+    { name: 'Desserts & Drinks', img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80' }
   ];
 
-  // State to track when mouse enters the section to show manual navigation controls
-  const [isHovered, setIsHovered] = useState(false);
-
-  // We double the array content to create a flawless, gap-free loop cycle in CSS animation
-  const infiniteLoopList = [...categoriesList, ...categoriesList];
+  // 2. We triple the array so the loop is so long it never shows a white blank space before resetting
+  const infiniteLoopList = [...categoriesList, ...categoriesList, ...categoriesList];
 
   return (
-   <section 
-  style={styles.section}
-  onMouseEnter={() => setIsHovered(true)}
-  onMouseLeave={() => setIsHovered(false)}
->
-  {/* ADD THESE LINES FOR THE TITLE AND SUBTITLE */}
-  <div style={styles.headerContainer}>
-    <h2 style={styles.heading}>Categories</h2>
-    <p style={styles.subHeading}>Browse an unlimited pool of fast-food bites.</p>
-  </div>
-      <div style={styles.containerWrapper}>
-        {/* Overlay manual buttons that reveal on hover */}
-        {isHovered && (
-          <>
-            <button style={{ ...styles.arrowBtn, left: '20px' }}>◀</button>
-            <button style={{ ...styles.arrowBtn, right: '20px' }}>▶</button>
-          </>
-        )}
+    <section style={styles.section}>
+      {/* Title & Subtitle Setup */}
+      <div style={styles.headerContainer}>
+        <h2 style={styles.heading}>Categories</h2>
+        <p style={styles.subHeading}>Browse an unlimited pool of fast-food bites.</p>
+      </div>
 
-        {/* Moving track container */}
-        <div style={styles.scrollTrack}>
+      <div style={styles.containerWrapper}>
+        {/* 4. The class "scroll-track" handles the infinite movement and pauses on hover automatically via CSS */}
+        <div className="scroll-track" style={styles.scrollTrack}>
           {infiniteLoopList.map((category, index) => (
             <div key={index} style={styles.card}>
-              <div style={styles.iconCircle}>{category.icon}</div>
+              <div style={styles.imageWrapper}>
+                <img src={category.img} alt={category.name} style={styles.image} />
+              </div>
               <h4 style={styles.cardTitle}>{category.name}</h4>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Embedded style block to inject the CSS keyframes directly into the document */}
+      {/* CSS Keyframes Injector */}
       <style>{`
+        .scroll-track {
+          animation: scrollLoop 75s linear infinite;
+        }
+        /* 4. Feature: Pauses the animation smoothly when the cursor hovers over the section */
+        .scroll-track:hover {
+          animation-play-state: paused;
+        }
         @keyframes scrollLoop {
           0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-33.333% * 7)); } /* Shifts exactly past the first set of 7 items */
+          100% { transform: translateX(calc(-350px * 7)); } /* Slides exactly past 7 cards (card width + gap) */
         }
       `}</style>
     </section>
@@ -61,7 +56,14 @@ const Categories = () => {
 };
 
 const styles = {
-    headerContainer: {
+  section: {
+    width: '100%',
+    backgroundColor: '#FFFFFF',
+    padding: '80px 0',
+    overflow: 'hidden',
+    position: 'relative',
+  },
+  headerContainer: {
     textAlign: 'center',
     marginBottom: '40px',
   },
@@ -75,65 +77,49 @@ const styles = {
     fontSize: '16px',
     color: '#666666',
   },
-  section: {
-    width: '100%',
-    backgroundColor: '#FFFFFF',
-    padding: '80px 0',
-    overflow: 'hidden',
-    position: 'relative',
-  },
   containerWrapper: {
     width: '100%',
-    maxWidth: '1050px', // Restricts width perfectly so exactly 3 cards fit (300px width + 50px gap each)
+    maxWidth: '1010px', // 1. Clamps width so exactly 3 larger cards (300px each + 40px gaps) show in the visible frame
     margin: '0 auto',
     position: 'relative',
-    padding: '0 25px',
+    padding: '0 20px',
   },
   scrollTrack: {
     display: 'flex',
-    gap: '50px',
+    gap: '40px', // Uniform gaps between cards
     width: 'max-content',
-    animation: 'scrollLoop 85s linear infinite', // Changed from 25s to 75s to slow it down 3x
   },
   card: {
-    width: '300px', // Exact sizing constraints
-    height: '240px',
+    width: '300px', // 1. Increased card width to make them larger
+    height: '280px', // Balanced height for images
     backgroundColor: '#F8F9FA',
     border: '1px solid #E9ECEF',
     borderRadius: '24px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    flexShrink: 0, // Prevents cards from getting squeezed smaller than 300px
-    boxShadow: '0 4px 12px rgba(0,0,0,0.01)',
+    padding: '15px',
+    flexShrink: 0, 
+    boxShadow: '0 4px 12px rgba(0,0,0,0.02)',
   },
-  iconCircle: {
-    fontSize: '60px',
+  imageWrapper: {
+    width: '100%',
+    height: '180px',
+    borderRadius: '16px',
+    overflow: 'hidden',
     marginBottom: '15px',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover', // 5. Image placeholder rule ready for whatever food photos you swap in
   },
   cardTitle: {
     fontSize: '18px',
     fontWeight: '600',
     color: '#222222',
     textAlign: 'center',
-  },
-  arrowBtn: {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    zIndex: 10,
-    backgroundColor: '#FFC000',
-    color: '#FFFFFF',
-    width: '45px',
-    height: '45px',
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: '16px',
-    boxShadow: '0 4px 10px rgba(255, 192, 0, 0.4)',
+    marginTop: 'auto', // Pushes text neatly to the bottom
   },
 };
 
