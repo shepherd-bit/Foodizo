@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiMapPin } from 'react-icons/fi';
 
 const Hero = () => {
   return (
@@ -18,7 +19,7 @@ const Hero = () => {
         <div style={styles.searchContainer}>
           <div style={styles.inputWrapper}>
             {/* GPS/Location Icon */}
-            <span style={styles.locationIcon}>📍</span>
+            <FiMapPin style={styles.locationIcon} />
             <input 
               type="text" 
               placeholder="Enter your delivery address" 
@@ -102,6 +103,7 @@ const styles = {
     fontSize: '18px',
     marginRight: '10px',
     cursor: 'pointer', // Ready for your location-detection feature later
+    color: '#E6A100',  // <-- ADD THIS LINE to apply the deep yellow
   },
   input: {
     width: '100%',
