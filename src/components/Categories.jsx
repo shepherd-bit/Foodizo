@@ -40,16 +40,12 @@ const Categories = () => {
       {/* CSS Keyframes Injector */}
       <style>{`
         .scroll-track {
-          animation: scrollLoop 75s linear infinite;
-        }
-        /* 4. Feature: Pauses the animation smoothly when the cursor hovers over the section */
-        .scroll-track:hover {
-          animation-play-state: paused;
-        }
-        @keyframes scrollLoop {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(calc(-350px * 7)); } /* Slides exactly past 7 cards (card width + gap) */
-        }
+    animation: scrollLoop 50s linear infinite;
+  }
+  @keyframes scrollLoop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 7)); } 
+  }
       `}</style>
     </section>
   );
@@ -91,7 +87,7 @@ const styles = {
   },
   card: {
     width: '300px', // 1. Increased card width to make them larger
-    height: '280px', // Balanced height for images
+    height: '400px', // Balanced height for images
     backgroundColor: '#F8F9FA',
     border: '1px solid #E9ECEF',
     borderRadius: '24px',
@@ -104,7 +100,7 @@ const styles = {
   },
   imageWrapper: {
     width: '100%',
-    height: '180px',
+    height: '320px',
     borderRadius: '16px',
     overflow: 'hidden',
     marginBottom: '15px',
