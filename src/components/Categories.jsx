@@ -40,7 +40,7 @@ const Categories = () => {
       {/* CSS Keyframes Injector */}
       <style>{`
         .scroll-track {
-    animation: scrollLoop 50s linear infinite;
+    animation: scrollLoop 35s linear infinite;
   }
   @keyframes scrollLoop {
     0% { transform: translateX(0); }
