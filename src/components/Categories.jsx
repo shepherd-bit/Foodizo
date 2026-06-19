@@ -19,11 +19,16 @@ const Categories = () => {
   const infiniteLoopList = [...categoriesList, ...categoriesList];
 
   return (
-    <section 
-      style={styles.section}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+   <section 
+  style={styles.section}
+  onMouseEnter={() => setIsHovered(true)}
+  onMouseLeave={() => setIsHovered(false)}
+>
+  {/* ADD THESE LINES FOR THE TITLE AND SUBTITLE */}
+  <div style={styles.headerContainer}>
+    <h2 style={styles.heading}>Categories</h2>
+    <p style={styles.subHeading}>Browse an unlimited pool of fast-food bites.</p>
+  </div>
       <div style={styles.containerWrapper}>
         {/* Overlay manual buttons that reveal on hover */}
         {isHovered && (
@@ -74,7 +79,7 @@ const styles = {
     display: 'flex',
     gap: '50px',
     width: 'max-content',
-    animation: 'scrollLoop 25s linear infinite', // Infinite continuous marquee motion
+    animation: 'scrollLoop 85s linear infinite', // Changed from 25s to 75s to slow it down 3x
   },
   card: {
     width: '300px', // Exact sizing constraints
