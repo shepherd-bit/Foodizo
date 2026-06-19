@@ -1,12 +1,29 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { LuMapPin, LuUtensilsCrossed, LuCreditCard, LuBike } from 'react-icons/lu';
 
 const HowToOrder = () => {
   // Steps data tracking the symbols, titles, and descriptions
   const steps = [
-    { icon: '📍', title: 'Input Location', desc: 'Type your address to discover restaurants delivery zones near you.' },
-    { icon: '🍔', title: 'Browse for Items', desc: 'Pick from your favorite fast-food menus, deals, and daily specials.' },
-    { icon: '🛍️', title: 'Order', desc: 'Securely check out in seconds using multiple flexible payment choices.' },
-    { icon: '🛵', title: 'Track your Order', desc: 'Watch your meals arrive live with real-time map tracking utilities.' }
+    { 
+      icon: <LuMapPin size={40} color="#E6A100" />, 
+      title: 'Input Location', 
+      desc: 'Type your address to discover restaurants delivery zo' 
+    },
+    { 
+      icon: <LuUtensilsCrossed size={40} color="#E6A100" />, 
+      title: 'Browse for Items', 
+      desc: 'Pick from your favorite fast-food menus, deals, and' 
+    },
+    { 
+      icon: <LuCreditCard size={40} color="#E6A100" />, 
+      title: 'Order', 
+      desc: 'Securely check out in seconds using multiple flexible payment' 
+    },
+    { 
+      icon: <LuBike size={40} color="#E6A100" />, 
+      title: 'Track your Order', 
+      desc: 'Watch your meals arrive live with real-time map tra' 
+    }
   ];
 
   const [isAnimate, setIsAnimate] = useState(false);
