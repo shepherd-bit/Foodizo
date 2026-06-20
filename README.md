@@ -5,8 +5,7 @@ A modern, highly responsive web application built to streamline the food browsin
 ---
 
 ### 📱 Project Previews
-![Preview](./public/preview.PNG)
-![Preview 2](./public/preview-2.PNG)
+![Preview](./public/screen-0.png)
 
 ---
 
