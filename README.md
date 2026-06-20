@@ -5,8 +5,9 @@ A modern, highly responsive web application built to streamline the food browsin
 ---
 
 ### 📱 Project Previews
-![Preview](./public/preview.PNG)
-![Preview 2](./public/preview-2.PNG)
+<img src="./public/preview.PNG" alt="Preview 1" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); margin-bottom: 20px;" width="100%" />
+
+<img src="./public/preview-2.PNG" alt="Preview 2" style="border-radius: 8px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);" width="100%" />
 
 ---
 
