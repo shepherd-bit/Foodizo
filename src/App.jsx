@@ -6,6 +6,7 @@ import Categories from './components/Categories';
 import PopularItems from './components/PopularItems';
 import HowToOrder from './components/HowToOrder';
 
+
 function App() {
   return (
     <div style={styles.appWrapper}>
